@@ -8,11 +8,15 @@
     </bean>
 
     <bean id="dbc" class="dbc.ConnectionFactory" scope="singleton">
+        <constructor-arg value="jdbc:mysql://192.168.1.45/mysql"/>
+        <constructor-arg value="root"/>
+        <constructor-arg value="test"/>
     </bean>
 
     <bean id="userDaoImp" class="dao.UserDaoImplements" scope="singleton">
         <property name="dbc" ref="dbc"/>
     </bean>
+
 
 
 </beans>
